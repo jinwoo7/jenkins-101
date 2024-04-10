@@ -32,6 +32,9 @@ pipeline {
                 echo 'Deliver....'
                 sh '''
                 echo "doing delivery stuff.."
+		cd myapp
+		cp hello.py deploy_app.py
+		python3 deploy_app.py --name=Jinwoo
                 '''
             }
         }
